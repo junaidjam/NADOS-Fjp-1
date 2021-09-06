@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+
+  public static void main(String[] args) {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int count = 0;
+    int temp=n;
+    while (temp > 0){
+      temp = temp / 10;
+      count++;
+    }
+    int deno =(int)Math.pow(10,count-1);
+    while(deno>0){
+        int x = n/deno;
+        n = n%deno;
+        System.out.println(x);
+        deno = deno/10;
+    }
+  }
+}
