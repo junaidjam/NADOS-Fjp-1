@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+
+  public static void main(String[] args){
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int k = scn.nextInt();
+    int t = n;
+    int div=1;
+    int mul=1;
+    int count = 0;
+    while (t != 0) {
+      t = t / 10;
+      count++;
+    }
+    k= k%count;
+    if(k<0){
+        k=k+count;
+    }
+    k= k%count;
+    for(int i=1;i<=count;i++){
+        if(i<=k){
+            div = div*10;
+        }
+        else{
+            mul = mul*10; 
+        }
+    }
+    int q = n/div;
+    int r = n%div;
+    int ans = (r*mul)+q;
+    System.out.println(ans);
+  }
+}
