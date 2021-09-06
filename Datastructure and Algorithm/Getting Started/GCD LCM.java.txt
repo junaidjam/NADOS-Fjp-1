@@ -1,0 +1,23 @@
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here 
+      Scanner scn = new Scanner(System.in);
+      int num1 = scn.nextInt();
+      int num2 = scn.nextInt();
+      int tnum1 = num1;
+      int tnum2 = num2;
+      int r = 1;
+      while(r !=0){
+          r = tnum1 % tnum2;
+          tnum1 = tnum2;
+          tnum2 = r;
+      }
+      int GCD = tnum1;
+      int LCM = (num1 * num2)/GCD;
+      System.out.println(GCD);
+      System.out.println(LCM);
+     }
+    }
