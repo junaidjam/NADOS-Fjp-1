@@ -7,16 +7,18 @@ public class Main {
 
     // write ur code here
     int n = scn.nextInt();
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i < n+1; i++) {
         for (int j = 1; j <= n; j++) {
-            if (j<=n-i){
-                System.out.print(" \t");
+            if (j<(n+1)-i){
+                System.out.print("\t");
             }
             else{
                 System.out.print("*\t");
             }
         }
-        System.out.println();
+        if(i<n){
+            System.out.println(); 
+        }
     }
   }
 }
