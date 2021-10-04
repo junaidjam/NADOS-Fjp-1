@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+     int i;
+     int j;
+     int n = scn.nextInt();
+     for(i=1;i<=n;i++){
+         if(i<=(n/2)+1){
+             for(j=1;j<=n;j++){
+                if(i==1 || i==n || i==j || i+j == n+1){
+                    System.out.print("*\t");
+                }
+                else{
+                    System.out.print("\t");
+                }
+            }
+         }
+         else{
+             for(j=1;j<=i;j++){
+                if(i+j>n){
+                    System.out.print("*\t");
+                }
+                else{
+                    System.out.print("\t");
+                }
+             }
+         }
+         if(i<n){
+             System.out.println();
+         }
+     }
+
+ }
+}
