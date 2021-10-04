@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int i;
+        int j;
+        int n = scn.nextInt();
+        int p = (n/2)+1;
+        int k = n;
+        for(i = 1;i<=n;i++){
+            if(i<=p){
+                for(j=1;j<p+i;j++){
+                    if(j<p && i !=p){
+                        System.out.print("\t");
+                    }
+                    else{
+                        System.out.print("*\t");
+                    }
+                }
+            }
+            else{
+                k--;
+                for(j = 1;j<=k;j++){
+                    if(j<p){
+                        System.out.print("\t");
+                    }
+                    else{
+                        System.out.print("*\t");
+                    }
+                }
+            }
+            if(i<n){
+                System.out.println();
+            }
+        }
+    }
+}
