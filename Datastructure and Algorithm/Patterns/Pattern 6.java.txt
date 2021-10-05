@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int n = scn.nextInt();
+        int i,j;
+        int k = -1;
+        int str1 = (n+1)/2;
+        for(i = 1;i<=n;i++){
+            if(i<=(n+1)/2){
+                for(j=1;j<=str1;j++){
+                    System.out.print("*\t");
+                }
+                k=k+2;
+                for(j=1;j<=k;j++){
+                    System.out.print("\t");
+                }
+                for(j=1;j<=str1;j++){
+                    System.out.print("*\t");
+                }
+            str1--;
+            }
+            if(i>(n+1)/2){
+                for(j=1;j<=str1+2;j++){
+                    System.out.print("*\t");
+                }
+                for(j = 1;j<=(k-2);j++){
+                    System.out.print("\t");
+                }
+                for(j=1;j<=str1+2;j++){
+                    System.out.print("*\t");
+                }
+            str1++;
+            k = k-2;
+            }
+            if(i<n){
+                System.out.println();
+            }
+        }
+
+    }
+}
