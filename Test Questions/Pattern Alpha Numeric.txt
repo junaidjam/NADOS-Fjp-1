@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int cout = 1;
+        char ch = 'A';
+        for(int i = 1;i<=n;i++){
+            for(int j = 0;j<2*i;j++){
+                if(j % 2 ==0){
+                    System.out.print(ch + "\t");
+                    ch++;
+                }
+                else{
+                    System.out.print(cout + "\t");
+                    cout++;
+                }
+            } 
+            System.out.println();
+        }
+    }
+}
